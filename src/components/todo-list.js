@@ -6,11 +6,8 @@ const TodoList = ({todos}) => {
     const elements = todos.map((item) => {
         const {id, ...itemProps} = item;
     return (
-        <li><TodoListItem 
-        // label={item.label}
-        // important = {item.important}
-         {...item}
-        />
+       <li key={item.id}>
+        <TodoListItem {...itemProps} />
         </li>
     );
     });
