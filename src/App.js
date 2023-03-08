@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import Header from "./Header/Header";
 import AddTodo from "./AddTodo/AddTodo";
 import TodoList from "./TodoList/TodoList";
+import './App.css'
+import { Container } from "react-bootstrap";
+
 function App(){
     const [todo, setTodo] = useState([{
         id: 1,
@@ -21,11 +24,11 @@ function App(){
 
     console.log(todo)
     return (
-        <div>
+        <Container>
             <Header/>
             <AddTodo todo = {todo} setTodo = {setTodo}/>
             <TodoList todo = {todo} setTodo = {setTodo}/>
-        </div>
+        </Container>
     )
 }
 export default App;

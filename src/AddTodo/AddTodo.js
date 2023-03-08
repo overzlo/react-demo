@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-import uuid from 'uuid'
 import { v1 as uuidv1 } from 'uuid';
+import {Row, Col, Button, FormControl} from 'react-bootstrap'
+import './AddTodo.css'
 
 
 function AddTodo({todo, setTodo}){
@@ -18,10 +19,12 @@ function AddTodo({todo, setTodo}){
         setValue('')
     }
     return(
-        <div>
-            <input placeholder='Enter something' value={value} onChange = {(e)=>setValue(e.target.value)}/>
-            <button onClick={saveTodo}>Сохранить</button>
-        </div>
+        <Row>
+            <Col className='add'>
+            <FormControl placeholder='Enter something' value={value} onChange = {(e)=>setValue(e.target.value)}/>
+            <Button onClick={saveTodo} className = 'btn' variant = "danger">Сохранить</Button>
+            </Col>
+        </Row>
     )
 }
 export default AddTodo;

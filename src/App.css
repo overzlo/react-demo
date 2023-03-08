@@ -1,0 +1,7 @@
+body {
+    margin: 2rem auto 0 auto;
+    max-width: 1200px;
+    display: flex;
+    background-color: antiquewhite;
+}
+
