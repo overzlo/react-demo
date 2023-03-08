@@ -23,7 +23,7 @@ function App(){
     return (
         <div>
             <Header/>
-            <AddTodo/>
+            <AddTodo todo = {todo} setTodo = {setTodo}/>
             <TodoList todo = {todo} setTodo = {setTodo}/>
         </div>
     )
